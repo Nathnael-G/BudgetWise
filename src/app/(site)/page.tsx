@@ -1,8 +1,10 @@
 import React from 'react'
 
+import { ModeToggle } from '@/components/landing-page/header'
+
 function page() {
   return (
-    <div>page1</div>
+    <div><ModeToggle/></div>
   )
 }
 
