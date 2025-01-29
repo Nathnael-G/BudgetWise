@@ -1,11 +1,24 @@
 import React from 'react'
 
-import { ModeToggle } from '@/components/landing-page/header'
+import { TopHeader } from '@/components/landing-page/header'
+import Hero from '@/components/landing-page/Hero'
+import Nav from '@/components/landing-page/nav'
+import Deals from '@/components/landing-page/Deals'
+import Testimonials from '@/components/landing-page/Testimonials'
+import Footer from '@/components/landing-page/Footer'
 
-function page() {
+
+function HomePage() {
   return (
-    <div><ModeToggle/></div>
+    <>
+      <TopHeader />
+      <Nav />
+      <Hero />
+      <Deals />
+      <Testimonials />
+      <Footer />
+    </>
   )
 }
 
-export default page
+export default HomePage
