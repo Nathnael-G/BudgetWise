@@ -6,7 +6,7 @@ import Link from 'next/link';
 function SignInPage() {
   return (
     <main className="flex min-h-screen w-full">
-      <section className="flex-1 bg-homeey-blue flex flex-col items-center justify-center relative overflow-hidden">
+      <section className="hidden md:flex flex-1 bg-homeey-blue flex flex-col items-center justify-center relative overflow-hidden">
         {/* Left side content */}
         <div className="absolute inset-0 bg-overlay-image bg-cover bg-center w-1/2 h-full opacity-75 z-0 animate-fadeIn"></div>
         <Image src="/horizon-logo.png" alt="Horizonlogo" width={500} height={500} className="w-5/12 mb-4 z-10 animate-slideIn" />
@@ -45,7 +45,10 @@ function SignInPage() {
               </label>
               <a href="#" className="text-sm underline text-gray-400 font-normal">Forgot your password?</a>
             </div>
-            <Button className="w-full bg-sky-600 hover:bg-sky-700">Login</Button>
+            <Button className="w-full bg-sky-600 hover:bg-sky-700 relative group">
+              Login
+              <span className="absolute right-4 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-transform transition-opacity duration-300 ease-out">→</span>
+            </Button>
           </form>
           <div className="flex items-center my-7">
             <hr className="flex-grow" />
