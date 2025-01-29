@@ -11,7 +11,7 @@ const data = {
     data: [10, 15, 20, 18, 25, 30, 28, 35, 32, 40, 38, 45], // Replace with your actual data
     borderColor: '#00bfff', // Set the line color
     borderWidth: 2,
-    fill: true, // Disable area fill
+    fill: false, // Disable area fill
   }]
 };
 
