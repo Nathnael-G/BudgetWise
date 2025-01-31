@@ -1,4 +1,4 @@
-# Horizon organizational finance tracking Next.js Project
+# BudgetWise organizational finance tracking Next.js Project
 
 Welcome to the Horizon organizational finance tracking Next.js project! This project is designed to provide a modern and user-friendly web application used to track the finances for small to medium orgainizations and determine the current and the future status of the company.
 
@@ -12,7 +12,7 @@ Welcome to the Horizon organizational finance tracking Next.js project! This pro
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/Nathnael-G/Horizon.git`
+1. Clone the repository: `git clone https://github.com/Nathnael-G/BudgetWise.git`
 2. Navigate to the project directory: `cd estate-client`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
