@@ -23,8 +23,8 @@ const Sidebar = () => {
             <aside className={`bg-white text-black p-4 fixed top-0 left-0 h-full z-50 w-64 border border-r-slate-500 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
                 <div className="container mx-auto">
                     <div className='flex items-center mb-5'>
-                        <Image src="/horizon-logo.png" alt="horizonlogo" width={32} height={32} />
-                        <h1 className="ml-2 text-3xl font-bold">Horizon</h1>
+                        <Image src="/horizon-logo.png" alt="BudgetWise-logo" width={32} height={32} />
+                        <h1 className="ml-2 text-3xl font-bold">BudgetWise</h1>
                     </div>
                     <ul className="flex flex-col">
                         <li>

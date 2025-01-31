@@ -1,34 +1,83 @@
-"use client"
-import React from 'react'
-import MyLineChart from './predictioncharts/linegraph';
+import React from 'react';
+import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, DoughnutController, ArcElement } from 'chart.js';
+import { Line, Doughnut } from 'react-chartjs-2';
 
-const data = {
-    labels: [
-      'Red',
-      'Blue',
-      'Yellow'
-    ],
-    datasets: [{
-      label: 'My First Dataset',
+ChartJS.register(LineElement, CategoryScale, LinearScale, DoughnutController, ArcElement);
+
+const lineOptions = {
+  maintainAspectRatio: false, // Ensure the chart doesn't grow beyond its container
+  scales: {
+    x: {
+      display: true, // Hide X axis
+    },
+    y: {
+      display: true, // Hide Y axis
+    },
+  },
+  plugins: {
+    legend: {
+      display: false, // Hide legend
+    },
+  },
+  elements: {
+    line: {
+      tension: 0.4, // Smooth the line
+    },
+  },
+};
+
+const doughnutOptions = {
+  maintainAspectRatio: false, // Ensure the chart doesn't grow beyond its container
+  plugins: {
+    legend: {
+      display: false, // Hide legend
+    },
+  },
+};
+
+const lineData = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+  datasets: [
+    {
+      data: [12, 19, 3, 5],
+      borderColor: '#2D5BFF',
+      fill: false,
+      pointRadius: 0, // Remove points
+    },
+  ],
+};
+
+const doughnutData = {
+  labels: ['Segment 1', 'Segment 2', 'Segment 3'],
+  datasets: [
+    {
       data: [300, 50, 100],
-      backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
-      ],
-      hoverOffset: 4
-    }]
-  };
+      backgroundColor: ['#1E90FF', '#4682B4', '#5F9EA0'],
+      hoverBackgroundColor: ['#1E90FF', '#4682B4', '#5F9EA0'],
+    },
+  ],
+};
 function PredectionSection() {
   return (
-    <section className='bg-white shadow-md p-4 flex flex-wrap items-center rounded-lg ml-1 mt-3'>
-        <div>
-        <MyLineChart />
+    <div className='ml-2'>
+      <section className="bg-white shadow-lg p-6 m-2 flex flex-col rounded-lg ml-64 mr-8" style={{ borderRadius: '20px', height: '300px' }}>
+        <div className="w-full flex justify-between">
+          <div className="w-1/2 flex flex-col items-center">
+            
+            <div className="flex items-center justify-center w-full" style={{ height: '200px' }}>
+              <Line data={lineData} options={lineOptions} />
+            </div>
+          </div>
+          <div className="w-1/2 flex flex-col items-center">
+            <div className="flex items-center justify-center w-full" style={{ height: '200px' }}>
+              <Doughnut data={doughnutData} options={doughnutOptions} />
+            </div>
+          </div>
         </div>
-        <div className='w-full flex justify-between flex-wrap'>
-            <p>Prediction for the next 5 months</p> <h2>Status: <span>Good</span></h2>
-        </div>
-    </section>
+        <div className="flex justify-evenly mt-4">
+            <div className='flex justify-between gap-'>
+          <p className="text-lg font-bold">Prediction for the next month</p><p className="text-lg"><strong>Status: <span className="text-green-500">Good</span></strong></p></div><p className="text-lg font-bold"> Budget Allocation</p>
+        </div>  </section></div>
   )
 }
 

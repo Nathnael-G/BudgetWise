@@ -11,7 +11,7 @@ import {
 
 function BudgetTasks() {
   return (
-    <div className='ml-6 mt-6 flex justify-evenly flex-wrap'>
+    <div className='ml-64 mt-6 flex justify-evenly flex-wrap'>
 <Card className='w-96'>
   <CardHeader>
     <CardTitle>My Budget</CardTitle>

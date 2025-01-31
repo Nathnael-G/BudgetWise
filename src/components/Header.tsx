@@ -8,7 +8,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md p-4 flex justify-between items-center rounded">
+    <div className='ml-2'>
+    <header className="bg-white shadow-md p-4 flex justify-between items-center rounded ml-64 mr-8">
       <div>
         <h1 className="text-lg font-bold">Welcome Admin</h1>
         <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -26,6 +27,7 @@ const Header = () => {
 
       </div>
     </header>
+    </div>
   );
 };
 
